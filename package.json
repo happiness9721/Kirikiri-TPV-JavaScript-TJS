@@ -10,6 +10,14 @@
     "categories": [
         "Languages"
     ],
+    "private": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/happiness9721/Kirikiri-TPV-JavaScript-TJS.git"
+	},
+	"bugs": {
+		"url": "https://github.com/happiness9721/Kirikiri-TPV-JavaScript-TJS/issues"
+	},
     "contributes": {
         "languages": [{
             "id": "tjs",
