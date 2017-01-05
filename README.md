@@ -15,3 +15,7 @@ It's still in progress ( [GitHub](https://github.com/happiness9721/Kirikiri-TPV-
 ### 0.0.1
 
 Finished syntax highlighting.
+
+### 0.0.2
+
+Add icon.
