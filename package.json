@@ -8,6 +8,7 @@
         "vscode": "^1.5.0"
     },
     "icon": "krkr.ico",
+    "license": "MIT",
     "categories": [
         "Languages"
     ],
