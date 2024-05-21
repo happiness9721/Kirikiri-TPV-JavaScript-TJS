@@ -1,0 +1,426 @@
+{
+    "comment": "Krkr/TPV Javascript",
+    "fileTypes": [
+        "tjs"
+    ],
+    "firstLineMatch": "^#!/usr/bin/env node",
+    "foldingStartMarker": "\\{\\s*$",
+    "foldingStopMarker": "^\\s*\\}",
+    "keyEquivalent": "^~J",
+    "name": "JavaScript",
+    "patterns": [
+        {
+            "comment": "node.js shebang",
+            "match": "^#!/usr/bin/env node",
+            "name": "comment.line.tjs"
+        },
+        {
+            "captures": {
+                "1": {
+                    "name": "support.class.tjs"
+                },
+                "2": {
+                    "name": "support.constant.tjs"
+                },
+                "3": {
+                    "name": "keyword.operator.tjs"
+                }
+            },
+            "comment": "match stuff like: Sound.prototype = { … } when extending an object",
+            "match": "([a-zA-Z_?.$][\\w?.$]*)\\.(prototype)\\s*(=)\\s*",
+            "name": "meta.class.tjs"
+        },
+        {
+            "captures": {
+                "1": {
+                    "name": "support.class.tjs"
+                },
+                "2": {
+                    "name": "support.constant.tjs"
+                },
+                "3": {
+                    "name": "entity.name.function.tjs"
+                },
+                "4": {
+                    "name": "keyword.operator.tjs"
+                },
+                "5": {
+                    "name": "storage.type.function.tjs"
+                },
+                "6": {
+                    "name": "punctuation.definition.parameters.begin.tjs"
+                },
+                "7": {
+                    "name": "variable.parameter.function.tjs"
+                },
+                "8": {
+                    "name": "punctuation.definition.parameters.end.tjs"
+                }
+            },
+            "comment": "match stuff like: Sound.prototype.play = function() { … }",
+            "match": "([a-zA-Z_?.$][\\w?.$]*)\\.(prototype)\\.([a-zA-Z_?.$][\\w?.$]*)\\s*(=)\\s*(function)?\\s*(\\()(.*?)(\\))",
+            "name": "meta.function.prototype.tjs"
+        },
+        {
+            "captures": {
+                "1": {
+                    "name": "support.class.tjs"
+                },
+                "2": {
+                    "name": "support.constant.tjs"
+                },
+                "3": {
+                    "name": "entity.name.function.tjs"
+                },
+                "4": {
+                    "name": "keyword.operator.tjs"
+                }
+            },
+            "comment": "match stuff like: Sound.prototype.play = myfunc",
+            "match": "([a-zA-Z_?.$][\\w?.$]*)\\.(prototype)\\.([a-zA-Z_?.$][\\w?.$]*)\\s*(=)\\s*",
+            "name": "meta.function.tjs"
+        },
+        {
+            "captures": {
+                "1": {
+                    "name": "support.class.tjs"
+                },
+                "2": {
+                    "name": "entity.name.function.tjs"
+                },
+                "3": {
+                    "name": "keyword.operator.tjs"
+                },
+                "4": {
+                    "name": "storage.type.function.tjs"
+                },
+                "5": {
+                    "name": "punctuation.definition.parameters.begin.tjs"
+                },
+                "6": {
+                    "name": "variable.parameter.function.tjs"
+                },
+                "7": {
+                    "name": "punctuation.definition.parameters.end.tjs"
+                }
+            },
+            "comment": "match stuff like: Sound.play = function() { … }",
+            "match": "([a-zA-Z_?.$][\\w?.$]*)\\.([a-zA-Z_?.$][\\w?.$]*)\\s*(=)\\s*(function)\\s*(\\()(.*?)(\\))",
+            "name": "meta.function.tjs"
+        },
+        {
+            "captures": {
+                "1": {
+                    "name": "entity.name.function.tjs"
+                },
+                "2": {
+                    "name": "keyword.operator.tjs"
+                },
+                "3": {
+                    "name": "storage.type.function.tjs"
+                },
+                "4": {
+                    "name": "punctuation.definition.parameters.begin.tjs"
+                },
+                "5": {
+                    "name": "variable.parameter.function.tjs"
+                },
+                "6": {
+                    "name": "punctuation.definition.parameters.end.tjs"
+                }
+            },
+            "comment": "match stuff like: play = function() { … }",
+            "match": "([a-zA-Z_?$][\\w?$]*)\\s*(=)\\s*(function)\\s*(\\()(.*?)(\\))",
+            "name": "meta.function.tjs"
+        },
+        {
+            "captures": {
+                "1": {
+                    "name": "storage.type.function.tjs"
+                },
+                "2": {
+                    "name": "entity.name.function.tjs"
+                },
+                "3": {
+                    "name": "punctuation.definition.parameters.begin.tjs"
+                },
+                "4": {
+                    "name": "variable.parameter.function.tjs"
+                },
+                "5": {
+                    "name": "punctuation.definition.parameters.end.tjs"
+                }
+            },
+            "comment": "match regular function like: function myFunc(arg) { … }",
+            "match": "\\b(function)\\s+([a-zA-Z_$]\\w*)?\\s*(\\()(.*?)(\\))",
+            "name": "meta.function.tjs"
+        },
+        {
+            "captures": {
+                "1": {
+                    "name": "entity.name.function.tjs"
+                },
+                "2": {
+                    "name": "storage.type.function.tjs"
+                },
+                "3": {
+                    "name": "punctuation.definition.parameters.begin.tjs"
+                },
+                "4": {
+                    "name": "variable.parameter.function.tjs"
+                },
+                "5": {
+                    "name": "punctuation.definition.parameters.end.tjs"
+                }
+            },
+            "comment": "match stuff like: foobar: function() { … }",
+            "match": "\\b([a-zA-Z_?.$][\\w?.$]*)\\s*:\\s*\\b(function)?\\s*(\\()(.*?)(\\))",
+            "name": "meta.function.json.tjs"
+        },
+        {
+            "captures": {
+                "1": {
+                    "name": "string.quoted.single.tjs"
+                },
+                "2": {
+                    "name": "punctuation.definition.string.begin.tjs"
+                },
+                "3": {
+                    "name": "entity.name.function.tjs"
+                },
+                "4": {
+                    "name": "punctuation.definition.string.end.tjs"
+                },
+                "5": {
+                    "name": "string.quoted.double.tjs"
+                },
+                "6": {
+                    "name": "punctuation.definition.string.begin.tjs"
+                },
+                "7": {
+                    "name": "entity.name.function.tjs"
+                },
+                "8": {
+                    "name": "punctuation.definition.string.end.tjs"
+                },
+                "9": {
+                    "name": "entity.name.function.tjs"
+                },
+                "10": {
+                    "name": "punctuation.definition.parameters.begin.tjs"
+                },
+                "11": {
+                    "name": "variable.parameter.function.tjs"
+                },
+                "12": {
+                    "name": "punctuation.definition.parameters.end.tjs"
+                }
+            },
+            "comment": "Attempt to match \"foo\": function",
+            "match": "(?:((')([^']*)('))|((\")([^\"]*)(\")))\\s*:\\s*\\b(function)?\\s*(\\()([^)]*)(\\))",
+            "name": "meta.function.json.tjs"
+        },
+        {
+            "captures": {
+                "1": {
+                    "name": "keyword.operator.new.tjs"
+                },
+                "2": {
+                    "name": "entity.name.type.instance.tjs"
+                }
+            },
+            "match": "(new)\\s+(\\w+(?:\\.\\w*)?)",
+            "name": "meta.class.instance.constructor"
+        },
+        {
+            "match": "\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b",
+            "name": "constant.numeric.tjs"
+        },
+        {
+            "begin": "'",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.begin.tjs"
+                }
+            },
+            "end": "'",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.end.tjs"
+                }
+            },
+            "name": "string.quoted.single.tjs",
+            "patterns": [
+                {
+                    "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)",
+                    "name": "constant.character.escape.tjs"
+                }
+            ]
+        },
+        {
+            "begin": "\"",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.begin.tjs"
+                }
+            },
+            "end": "\"",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.end.tjs"
+                }
+            },
+            "name": "string.quoted.double.tjs",
+            "patterns": [
+                {
+                    "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)",
+                    "name": "constant.character.escape.tjs"
+                }
+            ]
+        },
+        {
+            "begin": "/\\*\\*(?!/)",
+            "captures": {
+                "0": {
+                    "name": "punctuation.definition.comment.tjs"
+                }
+            },
+            "end": "\\*/",
+            "name": "comment.block.documentation.tjs"
+        },
+        {
+            "begin": "/\\*",
+            "captures": {
+                "0": {
+                    "name": "punctuation.definition.comment.tjs"
+                }
+            },
+            "end": "\\*/",
+            "name": "comment.block.tjs"
+        },
+        {
+            "captures": {
+                "1": {
+                    "name": "punctuation.definition.comment.tjs"
+                }
+            },
+            "match": "(//).*$\\n?",
+            "name": "comment.line.double-slash.tjs"
+        },
+        {
+            "captures": {
+                "0": {
+                    "name": "punctuation.definition.comment.html.tjs"
+                },
+                "2": {
+                    "name": "punctuation.definition.comment.html.tjs"
+                }
+            },
+            "match": "(<!--|-->)",
+            "name": "comment.block.html.tjs"
+        },
+        {
+            "match": "\\b(boolean|byte|char|class|property|parent|kag|double|enum|float|function|invalidate|incontextof|int|interface|long|short|var|this|super|void)\\b",
+            "name": "storage.type.tjs"
+        },
+        {
+            "match": "\\b(const|export|extends|final|implements|native|private|protected|public|static|synchronized|throws|transient|volatile)\\b",
+            "name": "storage.modifier.tjs"
+        },
+        {
+            "match": "\\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|package|return|switch|throw|try|while)\\b",
+            "name": "keyword.control.tjs"
+        },
+        {
+            "match": "\\b(delete|in|instanceof|new|typeof|with)\\b",
+            "name": "keyword.operator.tjs"
+        },
+        {
+            "match": "\\btrue\\b",
+            "name": "constant.language.boolean.true.tjs"
+        },
+        {
+            "match": "\\bfalse\\b",
+            "name": "constant.language.boolean.false.tjs"
+        },
+        {
+            "match": "\\bnull\\b",
+            "name": "constant.language.null.tjs"
+        },
+        {
+            "match": "\\b(super|this)\\b",
+            "name": "variable.language.tjs"
+        },
+        {
+            "match": "\\b(debugger)\\b",
+            "name": "keyword.other.tjs"
+        },
+        {
+            "match": "\\b(Anchor|Applet|Area|Array|Boolean|Button|Checkbox|Date|document|event|FileUpload|Form|Frame|Function|Scripts|Dictionary|System|Hidden|History|Image|JavaArray|JavaClass|JavaObject|JavaPackage|java|Layer|Link|Location|Math|MimeType|Number|navigator|netscape|Object|Option|Packages|Password|Plugin|Radio|RegExp|Reset|Select|String|Style|Submit|screen|sun|Text|Textarea|window|XMLHttpRequest)\\b",
+            "name": "support.class.tjs"
+        },
+        {
+            "match": "\\b(s(h(ift|ow(Mod(elessDialog|alDialog)|Help))|croll(X|By(Pages|Lines)?|Y|To)?|t(op|rike)|i(n|zeToContent|debar|gnText)|ort|u(p|b(str(ing)?)?)|pli(ce|t)|e(nd|t(Re(sizable|questHeader)|M(i(nutes|lliseconds)|onth)|Seconds|Ho(tKeys|urs)|Year|Cursor|Time(out)?|Interval|ZOptions|Date|UTC(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Date|FullYear)|FullYear|Active)|arch)|qrt|lice|avePreferences|mall)|h(ome|andleEvent)|navigate|c(har(CodeAt|At)|o(s|n(cat|textual|firm)|mpile)|eil|lear(Timeout|Interval)?|a(ptureEvents|ll)|reate(StyleSheet|Popup|EventObject))|t(o(GMTString|S(tring|ource)|U(TCString|pperCase)|Lo(caleString|werCase))|est|a(n|int(Enabled)?))|i(s(NaN|Finite)|ndexOf|talics)|d(isableExternalCapture|ump|etachEvent)|u(n(shift|taint|escape|watch)|pdateCommands)|j(oin|avaEnabled)|p(o(p|w)|ush|lugins.refresh|a(ddings|rse(Int|Float)?)|r(int|ompt|eference))|e(scape|nableExternalCapture|val|lementFromPoint|x(p|ec(Script|Command)?))|valueOf|UTC|queryCommand(State|Indeterm|Enabled|Value)|f(i(nd|le(ModifiedDate|Size|CreatedDate|UpdatedDate)|xed)|o(nt(size|color)|rward)|loor|romCharCode)|watch|l(ink|o(ad|g)|astIndexOf)|a(sin|nchor|cos|t(tachEvent|ob|an(2)?)|pply|lert|b(s|ort))|r(ou(nd|teEvents)|e(size(By|To)|calc|turnValue|place|verse|l(oad|ease(Capture|Events)))|andom)|g(o|et(ResponseHeader|M(i(nutes|lliseconds)|onth)|Se(conds|lection)|Hours|Year|Time(zoneOffset)?|Da(y|te)|UTC(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Da(y|te)|FullYear)|FullYear|A(ttention|llResponseHeaders)))|m(in|ove(B(y|elow)|To(Absolute)?|Above)|ergeAttributes|a(tch|rgins|x))|b(toa|ig|o(ld|rderWidths)|link|ack))\\b(?=\\()",
+            "name": "support.function.tjs"
+        },
+        {
+            "match": "\\bon(R(ow(s(inserted|delete)|e(nter|xit))|e(s(ize(start|end)?|et)|adystatechange))|Mouse(o(ut|ver)|down|up|move)|B(efore(cut|deactivate|u(nload|pdate)|p(aste|rint)|editfocus|activate)|lur)|S(croll|top|ubmit|elect(start|ionchange)?)|H(over|elp)|C(hange|ont(extmenu|rolselect)|ut|ellchange|l(ick|ose))|D(eactivate|ata(setc(hanged|omplete)|available)|r(op|ag(start|over|drop|en(ter|d)|leave)?)|blclick)|Unload|P(aste|ropertychange)|Error(update)?|Key(down|up|press)|Focus|Load|A(ctivate|fter(update|print)|bort))\\b",
+            "name": "support.function.event-handler.tjs"
+        },
+        {
+            "match": "!|\\$|%|&|\\*|\\-\\-|\\-|\\+\\+|\\+|~|===|==|=|!=|!==|<=|>=|<<=|>>=|>>>=|<>|<|>|!|&&|\\|\\||\\?\\:|\\*=|(?<!\\()/=|%=|\\+=|\\-=|&=|\\^=|\\b(in|instanceof|new|delete|typeof|void)\\b",
+            "name": "keyword.operator.tjs"
+        },
+        {
+            "match": "\\b(Infinity|NaN|undefined)\\b",
+            "name": "constant.language.tjs"
+        },
+        {
+            "begin": "(?<=[=(:]|^|return|&&|\\|\\||!|\\?)\\s*(/)(?![/*+{}?])",
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.string.begin.tjs"
+                }
+            },
+            "end": "(/)[igm]*",
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.string.end.tjs"
+                }
+            },
+            "name": "string.regexp.tjs",
+            "patterns": [
+                {
+                    "match": "\\\\.",
+                    "name": "constant.character.escape.tjs"
+                }
+            ]
+        },
+        {
+            "match": "\\;",
+            "name": "punctuation.terminator.statement.tjs"
+        },
+        {
+            "match": ",[ |\\t]*",
+            "name": "meta.delimiter.object.comma.tjs"
+        },
+        {
+            "match": "\\.",
+            "name": "meta.delimiter.method.period.tjs"
+        },
+        {
+            "match": "\\{|\\}",
+            "name": "meta.brace.curly.tjs"
+        },
+        {
+            "match": "\\(|\\)",
+            "name": "meta.brace.round.tjs"
+        },
+        {
+            "match": "\\[|\\]",
+            "name": "meta.brace.square.tjs"
+        }
+    ],
+    "scopeName": "source.tjs",
+    "uuid": "93E017CC-6F27-11D9-90EB-000D93589AF6"
+}

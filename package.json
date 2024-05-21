@@ -38,7 +38,7 @@
             {
                 "language": "tjs",
                 "scopeName": "source.tjs",
-                "path": "./syntaxes/tjs.tmLanguage"
+                "path": "./syntaxes/tjs.tmLanguage.json"
             }
         ]
     }
